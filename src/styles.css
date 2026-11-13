@@ -72,11 +72,13 @@ body {
 
 .paper {
   position: relative;
+  container-type: inline-size;
   padding: 44px 30px;
   border: 5px solid var(--gold);
   outline: 1px solid var(--gold2);
   outline-offset: -9px;
   background: var(--paper);
+  font-size: clamp(16px, 5vw, 20px);
   text-align: center;
   box-shadow: 0 16px 40px rgb(0 0 0 / 45%), 0 3px 10px rgb(0 0 0 / 25%);
   animation: card-arrive 0.7s ease-out both;
@@ -154,12 +156,12 @@ body {
 .paper h1 {
   margin: 0.1em 0;
   color: var(--felt);
-  font-size: 50px;
+  font-size: 2.5em;
   line-height: 1.1;
 }
 
 .paper h1.invitation-heading {
-  font-size: 26px;
+  font-size: 1.3em;
   font-weight: 400;
   letter-spacing: 0.06em;
 }
@@ -173,7 +175,7 @@ body {
 }
 
 .small {
-  font-size: 17px;
+  font-size: max(14px, 0.85em);
 }
 
 .gold-heart {
@@ -181,9 +183,14 @@ body {
 }
 
 .name-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2em;
   margin: 0;
   color: var(--gold);
-  font-size: 46px;
+  font-size: min(46px, 12cqw);
+  white-space: nowrap;
 }
 
 .name-text {
@@ -211,7 +218,7 @@ body {
   border: 1px solid var(--felt);
   background: var(--felt);
   color: #f6efdc;
-  font: 600 19px "Cormorant Garamond", Georgia, serif;
+  font: 600 max(16px, 0.95em) "Cormorant Garamond", Georgia, serif;
   letter-spacing: 0.04em;
   cursor: pointer;
 }
@@ -236,7 +243,7 @@ textarea {
   border: 1px solid var(--line);
   background: #fff;
   color: var(--ink);
-  font: 19px "Cormorant Garamond", Georgia, serif;
+  font: max(16px, 0.95em) "Cormorant Garamond", Georgia, serif;
 }
 
 .envelope {
@@ -578,7 +585,7 @@ textarea {
 .time {
   padding-top: 2px;
   color: var(--gold);
-  font-size: 17px;
+  font-size: max(14px, 0.85em);
   font-weight: 400;
   text-align: right;
 }
@@ -603,7 +610,7 @@ textarea {
   margin: 0;
   color: var(--felt);
   font-family: "Pinyon Script", "Snell Roundhand", cursive;
-  font-size: 25px;
+  font-size: 1.25em;
   font-weight: 400;
   line-height: 1.2;
 }
@@ -611,7 +618,7 @@ textarea {
 .stop p {
   margin: 0.2em 0 0;
   color: var(--soft);
-  font-size: 16px;
+  font-size: max(14px, 0.8em);
   line-height: 1.6;
 }
 
@@ -655,7 +662,7 @@ textarea {
 .closing {
   margin: 0 !important;
   color: var(--gold);
-  font-size: 30px;
+  font-size: 1.5em;
 }
 
 .preview-bar {

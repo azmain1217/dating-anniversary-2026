@@ -104,8 +104,8 @@ const countdown = (milliseconds) => {
 function NameLine() {
   return (
     <p className="script name-line">
-      <span className="name-sparkle" aria-hidden="true">✦</span>{" "}
-      {CONFIG.names[0]} + {CONFIG.names[1]}{" "}
+      <span className="name-sparkle" aria-hidden="true">✦</span>
+      <span>{CONFIG.names[0]} + {CONFIG.names[1]}</span>
       <span className="name-sparkle" aria-hidden="true">✦</span>
     </p>
   );
